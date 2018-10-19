@@ -1,4 +1,4 @@
-\documentclass[a4paper,14pt]{memoir}
+\documentclass[a4paper,14pt,extrafontsizes,openany]{memoir}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Linux Libertine O}
@@ -23,9 +23,15 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathabx} % for \blackdiamond
+\usepackage{MnSymbol} % for \medsquare
 \usepackage{parskip}  
 \usepackage{enumitem}  % for list indentation etc.
 \usepackage[columns=3]{idxlayout}  % three-column index
+
+\usepackage{longtable}
+\usepackage{paracol}
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage{wrapfig}
 
 \usepackage{footnotebackref}
 %% from https://tex.stackexchange.com/questions/116016/package-footnotebackref-conflict-with-memoir
@@ -199,54 +205,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cleardoublepage
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\cleardoublepage
 \pagestyle{empty}
-\null\vfil  % use this will cause a blank page at the beginning
+%\null\vfil  % use this will cause a blank page at the beginning
 \begin{center}
-  \Huge\textsf{Darconville's Cat} \par \vspace{0.5in}
+  \LARGE{ALEXANDER THEROUX} \par \vspace{1.2in} 
+  \HUGE{Darconville's Cat} \par \vspace{2in}
+%  \LARGE{Me, Myself, and I}
 \end{center}
-%\begin{center}
-%  \normalsize\textsf{AN} \par \vspace{0.5in} 
-%  \Huge\textsf{ETYMOLOGICAL DICTIONARY} \par \vspace{0.5in}
-%  \normalsize\textsf{OF THE} \par \vspace{0.5in}
-%  \Huge\textsf{ENGLISH LANGUAGE} \vspace{0.75in}
-%
-%  \normalsize{By THE} \par 
-%  \large{REV. WALTER W. SKEAT, LITT.D., D.C.L., LL.D., PH.D., F.B.A.} \par \vspace{0.25in}
-%  \tiny{ELRINGTON AND BOSWORTH PROFESSOR OF ANGLO-SAXON IN THE UNIVERSITY OF CAMBRIDGE \par
-%  AND FELLOW OF CHRIST'S COLLEGE}
-%  
-%  \vspace{1in}
-%  \normalsize{NEW EDITION REVISED AND ENLARGED} \par
-%  \vspace{0.5in}
-%  \small{
-%    `Step after step the ladder is ascended.' \par
-%    GEORGE HERBERT, \textit{Jacula Prudentum}. \par
-%    `Labour with what zeal we will, \par
-%    Something still remains undone.' \par
-%    LONGFELLOW, \textit{Birds of Passage.}
-%  }
-%  
-%  \vspace{1in}
-%  \large{
-%    OXFORD \par
-%    AT THE CLARENDON PRESS \par
-%    1910
-%  } 
-%\end{center}
-%%\vfil
+
+% \cleardoublepage
+% \pagestyle{empty}
+% \null\vfil  % use this will cause a blank page at the beginning
+% \begin{center}
+%   \Huge\textsf{Darconville's Cat} \par \vspace{0.5in}
+% \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \pagestyle{empty}
 \null\vfil
-%\begin{center}
-%	OXFORD \par
-%	PRINTED AT THE CLARENDON PRESS \par
-%	BY HORACE HART, M.A. \par
-%	PRINTER TO THE UNIVERSITY
-%\end{center}
 \vfil
 
 %%%%%%%%%%%%%%%%%%%%%%%%
@@ -257,7 +236,6 @@
 \include{explicitur}
 
 \tableofcontents*   % no self-reference (in memoir class)
-%\include{front_matter}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -267,19 +245,7 @@
 \pagenumbering{arabic}
 \pagestyle{ocd}
 
-%\include{text/chap01}
-%\include{text/chap02}
-%\include{text/chap03}
-%\include{text/chap04}
-%\include{text/chap05}
-%\include{text/chap06}
-%\include{text/chap07}
-%\include{text/chap08}
-%\include{text/chap09}
-%\include{text/chap10}
-%\include{text/chap11}
-%\include{text/chap12}
-\include{cat}
+\include{cat} % main text
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
