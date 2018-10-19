@@ -54,10 +54,6 @@
 \usepackage [autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 
-%% to increase the width of Roman chapter number in ToC
-\setlength\cftchapternumwidth{4.7em}
-%\setlength\cftsectionindent{3em}
-
 % \settrimmedsize{11in}{210mm}{*}
 % \setlength{\trimtop}{0pt}
 % \setlength{\trimedge}{\stockwidth}
@@ -133,8 +129,13 @@
 % %\chapterstyle{thatcher}
 \chapterstyle{VZ23}
 
-\renewcommand \thechapter{\Roman{chapter}}  % chapter numbering in Roman
+%% to increase the width of Roman chapter number in ToC
+\setlength\cftchapternumwidth{7.5em}
+%\setlength\cftsectionindent{3em}
+\renewcommand{\cftchapterpresnum}{\hfill}% Inserted before \chapter numbers in ToC
+\renewcommand{\cftchapteraftersnum}{\quad}% Inserts after \chapter numbers in ToC
 
+\renewcommand \thechapter{\Roman{chapter}}  % chapter numbering in Roman
 
 \newcommand{\mynote}[2]{\footnote{\textit{#1} #2} \index{#1}} % with large label
 
